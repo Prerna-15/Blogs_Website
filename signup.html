@@ -1,0 +1,52 @@
+<!doctype HTML>
+<html>
+<head>
+    <title>After Submit Page</title>
+</head>
+
+<body>
+<form action="After_submit.html" autocomplete="on" autocapitalize="on" name="form_1">
+
+    <fieldset>
+        <legend>Sign <Up></Up></legend>
+
+    <label> Enter the first name
+        <input type="text" maxlength="20" required><br><br>
+    </label>
+
+    <label>Enter the surname
+        <input type="text" maxlength="20" required><br><br>
+    </label>
+
+    <label>Enter your Email/ Username
+        <input type="text" required><br><br>
+    </label>
+
+    <label>Enter the Date of Birth
+        <input type="date" ><br><br>
+    </label>
+
+    <label>Select Profession</label>
+    <input list="datalist_pro" name="datalist_pro" required>
+    <datalist id="datalist_pro">
+        <option value="Student"></option>
+        <option value="Professional"></option>
+        <option value="Intern"></option>
+    </datalist><br><br>
+
+    <label>Enter new Password
+        <input type="password" minlength="6"required><br><br>
+    </label>
+
+    <label>Enter new confirmed Password
+        <input type="password" minlength="6" required><br><br>
+    </label>
+
+    <input formaction="Form_1.html" id="Sign_In_button" type="submit" formtarget="_blank">
+    </fieldset>
+
+
+</form>
+
+</body>
+</html>

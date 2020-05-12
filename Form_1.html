@@ -1,0 +1,136 @@
+<!doctype HTML>
+<html>
+<head>
+    <title>FORM_1</title>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            background-image: url("https://cdn.pixabay.com/photo/2017/01/31/00/41/flowers-2022672__340.png");
+            /*background-color: mediumseagreen;*/
+            solid-opacity: 0.5;
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: 60% 125%;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #719;
+            /*width: 1200px;*/
+            /*border: 1px solid #555;*/
+            /*display: inline;*/
+            /*display: block;*/
+            /*background-color: yellow;*/
+            /*border: 1px solid red;*/
+        }
+        li a{
+            display: block;
+            color: pink;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none ;
+            /*background-color: #937211;*/
+            /*text-align: center;*/
+            /*border-bottom: 1px solid #555;*/
+
+        }
+        li a:hover{
+            background-color: palevioletred;
+            color: white;
+        }
+        li{
+            float: left;
+            /*background-color: #721;*/
+            /*color: white;*/
+        }
+        .shift_right{
+            object-position: right;
+        }
+    </style>
+
+    <script>
+        // function submitting() {
+        //     document.forms["form_1"].submit()
+        // }
+        function checking_box() {
+            check_checkbox = document.getElementById("checkbox_1").click();
+            if (check_checkbox=true){
+                document.forms["submitting"].submit();
+            }
+        }
+    </script>
+
+</head>
+
+
+<body>
+<ul>
+<!--    <li><form action="login.html"><a href="login.html" target="_blank">Login</a><br><br></form></li>-->
+<!--    <li><form action="signup.html"><a href="signup.html" target="_blank">Sign Up</a><br><br></form></li>-->
+    <li><a href="blogs.html" target="_self"><b>Blogs</b></a></li>
+    <li><a href="services.html" target="_self"><b>Content Policy</b></a></li>
+    <li><a href="products.html" target="_self"><b>Feedback</b></a></li>
+    <li><a href="about.html" target="_self"><b>Contact Us</b></a></li>
+    <li><a class="shift_right" href="login.html" target="_blank"><b>Login</b></a></li>
+    <li><a class="shift_right" href="signup.html" target="_blank"><b>Sign Up</b></a></li>
+</ul>
+<br>
+
+Search <input type="search"><br><br>
+
+<form action="After_submit.html" autocomplete="on" autocapitalize="on" name="form_1">
+    <fieldset>
+<!--    <label>Select the gender</label>-->
+    <label for="Gender">Select the gender</label>
+    <select id="Gender">
+        <option>Female</option>
+        <option>Male</option>
+    </select><br><br>
+
+    <label>Mr
+        <input type="radio">
+    </label>
+
+    <label>Ms
+        <input type="radio"><br><br>
+    </label>
+
+    <label> Enter the first name
+        <input type="text"><br><br>
+    </label>
+
+    <label>Enter the surname
+        <input type="text"><br><br>
+    </label>
+
+    <label>Enter your Email
+        <input type="email"><br><br>
+    </label>
+
+    <label>Enter your mobile number
+        <input type="number"><br><br>
+    </label>
+
+    <label>Feedback
+        <textarea type="text" wrap="hard"></textarea><br><br>
+    </label>
+
+    <label>Select Files<br>
+        <input type="file" accept="*/*"><br><br>
+    </label>
+
+    <label>Please select below terms and conditions. Then click Submit to save form.<br>
+        <input id="checkbox_1" type="checkbox" onclick="checking_box()"><br>
+        <input type="reset">
+        <input type="submit" onclick="submitting()" disabled>
+    </label>
+
+    </fieldset>
+
+
+</form>
+
+</body>
+</html>
