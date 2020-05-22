@@ -3,24 +3,40 @@
 <head>
     <link rel="stylesheet" href="https://fontawesome.com/v4.7.0/icon/glass">
     <title>After Submit Page</title>
+
     <style>
         body{
-            /*background-image: url("https://cdn.pixabay.com/photo/2020/04/23/06/27/birds-5081283__340.png");*/
-            /*background-image: url("https://cdn.pixabay.com/photo/2018/02/24/07/17/pattern-3177414__340.png");*/
+            background-image: url("https://cdn.pixabay.com/photo/2020/01/26/11/58/hanging-cat-4794472__340.png");
+            /*background-image: url("https://cdn.pixabay.com/photo/2019/06/03/03/48/floral-4248035__340.png");*/
             background-color: rgba(0,45,12,0.5);
-            background-repeat: repeat-y;
-            background-size: auto;
-            background-position: left;
+            background-repeat: no-repeat;
+            background-size: 350px;
+            /*background-size: 700px;*/
+            background-position: top;
             background-attachment: scroll;
+        }
+        div.submit_text{
+            text-align: center;
+            padding: 230px 400px;
+        }
+        button {
+            background-color: pink;
+            color: black;
+        }
+        a{
+            text-decoration: none;
         }
     </style>
 </head>
 
 <body>
-<h1>SUBMITTED</h1>
-<p>We will contact you soon</p>
-<p>Click on button below to go to homepage.</p>
-<button><i class="fa fa-glass"></i>Go back</button>
+<div class="submit_text">
+    <h1 style="color: darkgreen">SUBMITTED</h1>
+    <p>Thank you for your response.</p>
+    <p>Click on button below to go to homepage.</p>
+    <button><a href="homepage.html" style="cursor: pointer">Go back</a></button>
+</div>
+
 
 </body>
 </html>
