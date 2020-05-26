@@ -1,28 +1,61 @@
 <!doctype HTML>
 <html>
 <head>
-    <title>After Submit Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Login Page</title>
+    <style>
+        #Sign_In_button{
+            padding: 6px 22px;
+            margin: 4px 2px;
+            background-color: green;
+        }
+        #Sign_Up_button{
+            padding: 6px 22px;
+            margin: 4px 2px;
+            background-color: orange;
+            color: black;
+        }
+
+    </style>
 </head>
 
 <body>
-<form action="After_submit.html" autocomplete="on" autocapitalize="on" name="form_1">
-    <fieldset>
-        <legend>Log In</legend>
+<div class="container">
+    <div class="page-header">
+        <h2 style="text-align:center; color: seagreen">Login</h2>
+    </div>
+</div>
 
-    <label>Enter your Email Address/ Username<br>
-        <input type="text"><br><br>
-    </label>
+<div class="container" style="text-align: center;width: 400px">
+    <form action="After_submit.html" autocomplete="on" autocapitalize="on" class="well">
+        <fieldset>
+            <div>Email Address/ Username<br>
+                <label>
+                    <input type="text">
+                </label><br><br>
+            </div>
+            <div class="alert alert-info">
+                <strong>Info!</strong>Please fulfill this field.
+            </div>
 
-    <label>Enter you Password<br>
-        <input type="password"><br><br>
-    </label>
+            <div>Password<br>
+                <label>
+                    <input type="password">
+                </label><br><br>
+            </div>
 
-    <input formaction="Form_1.html" id="Sign_In_button" type="submit" formtarget="_blank">
+            <input formaction="After_submit.html" id="Sign_In_button" class="btn btn-success" type="submit" formtarget="_blank" style="cursor: pointer">
+            <br>
+            <br>
+            <p>Not registered, <a href="signup.html" style="text-decoration: none">Sign Up</a></p>
 
-    </fieldset>
-
-
-</form>
+        </fieldset>
+    </form>
+</div>
 
 </body>
 </html>

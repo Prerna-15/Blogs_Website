@@ -1,0 +1,233 @@
+<!doctype HTML>
+<head>
+    <title>Bootstrap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background-image: repeating-radial-gradient(lightcoral, navajowhite);
+        }
+    </style>
+</head>
+
+<body>
+<h2 style="text-align: center">Feedback</h2><br>
+
+<div class="container">
+    <form class="form-horizontal">
+        <div class="control-label" style="text-align: left;border-radius: 12px">
+            <div class="form-inline" style="margin-left:200px;">
+                <label>Gender</label>
+                <div class="radio-inline">
+                    <input type="radio" name="optradio">Male<br>
+                </div>
+                <div class="radio-inline">
+                    <input type="radio" name="optradio">Female<br>
+                </div>
+                <div class="radio-inline">
+                    <input type="radio" name="optradio">Others<br>
+                </div>
+            </div><br>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">First Name</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Enter first name" id="first_name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Last name</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Enter last name" id="last_name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Email Address</label>
+                <div class="col-md-6">
+                    <input type="email" class="form-control" placeholder="Enter email address" id="email_addr" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Contact Number</label>
+                <div class="col-md-6">
+                    <input type="number" class="form-control" placeholder="Enter contact number" id="contact_num">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Feedback</label>
+                <div class="col-md-6">
+                    <input type="text" style="height: 100px" class="form-control" placeholder="Write feedback" id="feedback" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Add Files</label>
+                <div class="col-md-6">
+                    <input type="file" class="form-control" placeholder="Write feedback" accept="application/pdf" id="file_insert">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Please read the terms and conditions. Check the box</label>
+                <div class="checkbox" style="text-align: left">
+                    <label><input type="checkbox" required></label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-offset-2 col-sm-1"></label>
+                <div class="col-md-1">
+                    <button style="background-color: indianred" type="button" class="btn btn-success" id="reset_btn">Reset</button>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-sm-offset-2 col-sm-1"></label>
+                <div class="col-md-1">
+                    <button style="background-color: seagreen" formaction="After_submit.html" onclick="feedback_submit()" class="btn btn-primary" id="submit_btn">Submit</button>
+                </div>
+                <script>
+                    function feedback_submit() {
+                        alert("Check the privacy terms checkbox to proceed")
+                        if(confirm){
+                        }
+                        else {
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </form>
+
+
+
+
+</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!doctype HTML>-->
+
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Feedback Form</title>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <style>-->
+<!--        body{-->
+<!--            /*background-image: url("https://cdn.pixabay.com/photo/2017/01/31/00/41/flowers-2022672__340.png");*/-->
+<!--            background-image: url("https://cdn.pixabay.com/photo/2019/12/24/08/54/flying-dandelions-4716287__340.png");-->
+<!--            background-color: #cccccc;-->
+<!--            /*solid-opacity: 0.5;*/-->
+<!--            background-position: right;-->
+<!--            background-repeat: no-repeat;-->
+<!--            background-size: auto;-->
+<!--            padding-right: 700px;-->
+<!--        }-->
+<!--        .submit_btn{-->
+<!--            padding: 16px 32px;-->
+<!--            margin: 4px 2px;-->
+<!--            background-color: green;-->
+<!--        }-->
+<!--    </style>-->
+
+<!--</head>-->
+
+
+<!--<body>-->
+<!--<h2 style="text-align: center; color: darkviolet">FEEDBACK</h2>-->
+
+<!--<form action="After_submit.html" autocomplete="on" autocapitalize="on" class="form_1" style="text-align: center" ">-->
+<!--    <fieldset>-->
+<!--        &lt;!&ndash;    <label>Select the gender</label>&ndash;&gt;-->
+<!--        <label for="Gender">Select the gender</label>-->
+<!--        <select id="Gender">-->
+<!--            <option>Female</option>-->
+<!--            <option>Male</option>-->
+<!--        </select><br><br>-->
+
+<!--        <div>-->
+<!--            <label>Mr-->
+<!--            <input type="radio">-->
+<!--            </label>-->
+<!--        </div>-->
+
+<!--        <label>Ms-->
+<!--            <input type="radio"><br><br>-->
+<!--        </label>-->
+
+<!--        <label> First Name<br>-->
+<!--            <input type="text"><br><br>-->
+<!--        </label>-->
+
+<!--        <label>Last Name<br>-->
+<!--            <input type="text"><br><br>-->
+<!--        </label>-->
+
+<!--        <label>Email Address<br>-->
+<!--            <input type="email"><br><br>-->
+<!--        </label>-->
+
+<!--        <label>Contact Number<br>-->
+<!--            <input type="text"><br><br>-->
+<!--        </label>-->
+
+<!--        <label class="feedback_box">Feedback<br>-->
+<!--            <textarea type="text"  style="height:190px; width: 300px" required></textarea><br><br>-->
+<!--        </label>-->
+
+<!--        <label>Select Files<br>-->
+<!--            <input type="file" accept="*/*"><br><br>-->
+<!--        </label>-->
+
+<!--        <label>Please select below terms and conditions. Then click Submit to save form.-->
+<!--            <input id="checkbox_1" type="checkbox" onclick="checking_box()"><br>-->
+<!--            <input class="submit_btn" type="reset" style="cursor: pointer">-->
+<!--            <input class="submit_btn" type="submit" onclick="submitting()" style="cursor: pointer">-->
+<!--        </label>-->
+
+<!--    </fieldset>-->
+
+
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->

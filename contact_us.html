@@ -1,0 +1,210 @@
+<!doctype HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-image: url("https://cdn.pixabay.com/photo/2020/05/13/12/37/chapel-5167309_960_720.jpg");
+            solid-opacity: 0.5;
+            /*background-position: right;*/
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: visible;
+            height: 45px;
+        }
+        li a{
+            display: block;
+            text-align: center;
+            padding: 14px 60px;
+            text-decoration: none ;
+        }
+        li a:hover{
+            display: inline-block;
+            background-color: dimgrey;
+            color: white;
+            text-decoration: none;
+        }
+        ul li:hover{
+            background-color: dimgrey;
+            color: green;
+        }
+        .dropdown{
+            position: relative;
+            display: inline-block;
+            color: black;
+        }
+        .dropdown-content{
+            position: absolute;
+            display: none;
+            min-width: 10%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a{
+            /*color: black;*/
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+            background-color: lightgrey;
+        }
+        #Sign_In_button{
+            background-color: deepskyblue;
+            color: black;
+        }
+        #Sign_In_button:hover{
+            cursor: pointer;
+            background-color: blue;
+        }
+        footer {
+            list-style-type: none;
+            margin: 0;
+            overflow: visible;
+            background-color: lightgray;
+            float: left;
+            padding: 10px;
+            width: 100%;
+            color: black;
+        }
+        .footer_deco a{
+            text-decoration: none;
+            color: black;
+            padding: 10px 60px;
+            background-position: bottom;
+        }
+        footer a:hover{
+            color: black;
+            background-color: dimgrey;
+        }
+    </style>
+</head>
+
+
+<body>
+<!---->
+<div class="container" style="width: 100%;height: 100%;text-align: center">
+    <nav class="navbar navbar-inverse" style="background-color: lightgray">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <div class="dropdown">
+                        <span><a href="blogs.html" target="_self"><b><i class="fa fa-bars"></i> Category</b></a></span>
+                        <div class="dropdown-content">
+                            <p><a href="blogs.html" target="_self"><b>Comedy</b></a></p>
+                            <p><a href="blogs.html" target="_self"><b>Nature</b></a></p>
+                            <p><a href="blogs.html" target="_self"><b>Technology</b></a></p>
+                            <p><a href="blogs.html" target="_self"><b>Medicine</b></a></p>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="homepage.html" target="_self"><b><i class="fa fa-home"></i> Home</b></a></li>
+                <li><a href="feedback.html" target="_self"><b><i class="fa fa-th"></i> Feedback</b></a></li>
+                <li><a href="contact_us.html" target="_self"><b><i class="fa fa-user-o"></i> Contact Us</b></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="login.html" target="_blank"><b><i class="fa fa-sign-in"></i> Login</b></a></li>
+                <li><a href="signup.html" target="_blank"><b><i class="fa fa-user-plus"></i> Sign Up</b></a></li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+
+    <div class="row" style="color: greenyellow; text-align: center">
+        <div class="col-md-4">
+            <form class="form">
+                <div><i class="fa fa-mobile"></i> Call Us</div>
+            </form>
+            <div style="color: blue">9766565546</div>
+        </div>
+
+        <div class="col-md-4">
+            <form class="form">
+                <div><i class="fa fa-envelope"></i> Email</div>
+            </form>
+            <a href="https://www.mail.google.com" style="text-decoration: none">Prerna@gmail.com</a>
+        </div>
+
+        <div class="col-md-4">
+            <form class="form">
+                <div><i class="fa fa-location-arrow"></i> Address</div>
+            </form>
+            <a href="https://www.google.com/maps/place/Kharadi,+Pune,+Maharashtra/@18.5527584,73.9284202,14z/data=!3m1!4b1!4m5!3m4!1s0x3bc2c3c3288ba495:0x38e833613a63004a!8m2!3d18.5538241!4d73.9476689" style="text-decoration: none">Kharadi, Pune, Maharashtra</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+</div>
+
+<div class="container" style="text-align: center;width: 400px;color: deepskyblue;border-width: 25px">
+    <h2 style="color: plum">We would like to know you!!!</h2><br><br>
+    <form class="form-inline" autocomplete="on" autocapitalize="on">
+        <fieldset>
+            <div>Enter you Name<br>
+                <label><input style="color: black" type="text" placeholder="              Full Name"></label>
+            </div><br>
+
+            <div>Phone Number<br>
+                <label><input style="color: black" type="number" placeholder="          #1234566543#"></label>
+            </div><br>
+
+            <div>Email Address<br>
+                <label><input style="color: black" type="text" placeholder="       sample@domain.com"></label>
+            </div><br>
+
+            <div>Location<br>
+                <label><input style="color: black" type="text" placeholder="           Home Address"></label>
+            </div><br>
+
+            <div>
+                <button formaction="login.html" onclick="Sign_In()" class="btn btn-success" id="Sign_In_button" type="submit" formtarget="_blank">Submit</button>
+                <script>
+                function Sign_In() {
+                    alert("Login to submit details");
+                    if(confirm){
+                    }
+                    else {
+                    }
+                    document.getElementById("Sign_In_button").innerHTML=redirect
+                }
+                </script>
+            </div>
+
+        </fieldset>
+    </form>
+    <br>
+    <br>
+
+</div>
+
+<div style="color: lightblue;text-align: center">Made by
+    <a href="homepage.html" style="color: deepskyblue;text-decoration: none">Bloggy Technology</a>
+</div>
+<br>
+<br>
+
+
+
+<footer>
+    <div class="footer_deco" style="text-align: center">
+        <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+    </div>
+
+</footer>

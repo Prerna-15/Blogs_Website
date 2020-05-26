@@ -1,0 +1,328 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Blogs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: antiquewhite;
+            solid-opacity: 0.5;
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .header{
+            background-color: khaki;
+            padding: 50px;
+            text-align: center;
+            animation-name: changing_colors;
+            animation-duration: 10s;
+        }
+        @keyframes changing_colors {
+            0% {background-color: lightpink;}
+            12% {background-color: pink;}
+            20% {background-color: lightsalmon;}
+            30% {background-color: bisque;}
+            500% {background-color: plum;}
+            65% {background-color: burlywood;}
+            800% {background-color: tan;}
+            100% {background-color: wheat;}
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: visible;
+            height: 45px;
+            /*background-color: lightgray;*/
+            /*border: 1px solid darkslategray;*/
+        }
+        li a{
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 60px;
+            text-decoration: none ;
+        }
+        li a:hover{
+            background-color: dimgray;
+            color: white;
+            text-decoration: none;
+        }
+
+        li{
+            float: left;
+        }
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        div.col-sm-4{
+            width: 22.33%   ;
+            display: block;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid palevioletred;
+            box-sizing: border-box;
+            float: left;
+            margin: 10px 10px 10px 10px;
+            vertical-align: bottom;
+        }
+        div.col-sm-4:hover{
+            border: 1px solid darkviolet;
+        }
+        div.column img{
+            width: 100%;
+            height: auto;
+        }
+        div.img-responsive{
+            padding: 15px;
+            text-align: center;
+        }
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            min-width: 10%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+            background-color: lightgrey;
+        }
+        .img-responsive{
+            height: 300px;
+            width:100%;
+        }
+        footer {
+            list-style-type: none;
+            margin: 0;
+
+            overflow: visible;
+            background-color: lightgray;
+            float: left;
+            padding: 10px;
+            width: 100%;
+            color: black;
+        }
+        .footer_deco a{
+            text-decoration: none;
+            color: black;
+            padding: 10px 60px;
+            background-position: bottom;
+        }
+        footer a:hover{
+            color: black;
+            background-color: darkslategray;
+        }
+        .pagination{
+            display: inline-block;
+            background-position: left;
+        }
+        .pagination a{
+            color: red;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+        .pagination a:hover:not(.active) {
+            background-color: #123;
+            color: white}
+    </style>
+</head>
+
+<div class="container" style="width: 100%;height: 100%">
+    <div class="header"><p>HEADER</p></div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <div class="dropdown">
+                        <span><a href="blogs.html" target="_self" style="color: white"><b><i class="fa fa-bars"></i> Category</b></a></span>
+                        <div class="dropdown-content">
+                            <p><a href="blogs.html" target="_self"><b>Comedy</b></a></p>
+                            <p><a href="blogs.html" target="_self"><b>Nature</b></a></p>
+                            <p><a href="blogs.html" target="_self"><b>Technology</b></a></p>
+                            <p><a href="blogs.html" target="_self"><b>Medicine</b></a></p>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="homepage.html" target="_self"><b><i class="fa fa-home"></i> Home</b></a></li>
+                <li><a href="feedback.html" target="_self"><b><i class="fa fa-th"></i> Feedback</b></a></li>
+                <li><a href="contact_us.html" target="_self"><b><i class="fa fa-user-o"></i> Contact Us</b></a></li>
+            </ul>
+
+
+            <form class="navbar-form navbar-left">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search.." name="search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="login.html" target="_blank"><b><i class="fa fa-sign-in"></i> Login</b></a></li>
+                <li><a href="signup.html" target="_blank"><b><i class="fa fa-user-plus"></i> Sign Up</b></a></li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+
+    <div>
+        <button  onclick="demo()">click click</button>
+        <p id="click">This content is gonna change</p>
+    </div>
+    <script>
+        // function demo(){
+        //     document.getElementById("click").innerHTML="TADAAAAAAAA"
+        window.alert(4+9)
+        }
+    </script>
+
+    <div class="row" style="padding-left: 20px">
+        <div class="col-sm-4" style="height: 400px;width: 400px">
+            <a target="_blank" href="blogs.html">
+                <img src="https://cdn.pixabay.com/photo/2016/11/01/20/46/cows-1789577__340.png" alt="Blog_1" class="img-responsive">
+            </a><br>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo_1">Show more</button>
+            <div id="demo_1" class="collapse">You can use the overflow property when you want to have better control of the layout.
+                The overflow property specifies what happens if content overflows an element's box</div></div>
+        <!--    -->
+
+        <div class="col-sm-4" style="height: 400px;width: 400px">
+            <a target="_blank" href="blogs.html">
+                <img src="https://cdn.pixabay.com/photo/2017/01/31/00/41/flowers-2022672__340.png" alt="Blog_2" class="img-responsive">
+            </a><br>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo_2">Show more</button>
+            <div id="demo_2" class="collapse">You can use the overflow property when you want to have better control of the layout.
+                The overflow property specifies what happens if content overflows an element's box. You can use the overflow property when you want to have better control of the layout.
+                The overflow property specifies what happens if content overflows an element's box</div></div>
+        <!--    -->
+
+        <div class="col-sm-4" style="height: 400px;width: 400px">
+            <a target="_blank" href="blogs.html">
+                <img src="https://cdn.pixabay.com/photo/2019/03/25/12/56/flowers-4080189__340.png" alt="Blog_3" class="img-responsive">
+            </a><br>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo_3">Show more</button>
+            <div id="demo_3" class="collapse">You can use the overflow property when you want to have better control of the layout.
+                The overflow property specifies what happens if content overflows an element's box</div></div>
+        <!--    -->
+
+        <div class="col-sm-4" style="height: 400px;width: 400px">
+            <a target="_blank" href="blogs.html">
+                <img src="https://t3.ftcdn.net/jpg/02/04/86/48/240_F_204864836_5T04mzX4SA9FaHG98vKzWsZdX3A3A556.jpg" alt="Blog_4" class="img-responsive">
+            </a><br>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo_4">Show more</button>
+            <div id="demo_4" class="collapse">You can use the overflow property when you want to have better control of the layout.
+                The overflow property specifies what happens if content overflows an element's box</div></div>
+        <!--    -->
+
+        <div class="col-sm-4" style="height: 400px;width: 400px">
+            <a target="_blank" href="blogs.html">
+                <img src="https://images.pexels.com/photos/50570/sandstone-the-wave-rock-nature-50570.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Blog_5" class="img-responsive">
+            </a><br>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo_5">Show more</button>
+            <div id="demo_5" class="collapse">You can use the overflow property when you want to have better control of the layout.
+                The overflow property specifies what happens if content overflows an element's box</div></div>
+        <!--    -->
+
+        <div class="col-sm-4" style="height: 400px;width: 400px">
+            <a target="_blank" href="blogs.html">
+                <img src="https://cdn.pixabay.com/photo/2019/03/25/12/56/flowers-4080189__340.png" alt="Blog_6" class="img-responsive">
+            </a>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo_6">Show more</button>
+            <div id="demo_6" class="collapse">You can use the overflow property when you want to have better control of the layout.
+                The overflow property specifies what happens if content overflows an element's box</div></div>
+        <!--    -->
+
+        <div class="col-sm-4" style="height: 400px;width: 400px">
+            <a target="_blank" href="blogs.html">
+                <img src="https://cdn.pixabay.com/photo/2016/10/29/23/48/animals-1782013__340.png" alt="Blog_7" class="img-responsive">
+            </a>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo_7">Show more</button>
+            <div id="demo_7" class="collapse">You can use the overflow property when you want to have better control of the layout.
+                The overflow property specifies what happens if content overflows an element's box</div></div>
+        <!--    -->
+
+        <div class="col-sm-4" style="height: 400px;width: 400px">
+            <a target="_blank" href="blogs.html">
+                <img src="https://cdn.pixabay.com/photo/2013/07/13/12/35/animal-159935__340.png" alt="Blog_8" class="img-responsive">
+            </a>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo_8">Show more</button>
+            <div id="demo_8" class="collapse">You can use the overflow property when you want to have better control of the layout.
+                The overflow property specifies what happens if content overflows an element's box</div></div>
+        <!--    -->
+
+        <div class="col-sm-4" style="height: 400px;width: 400px">
+            <a target="_blank" href="blogs.html">
+                <img src="https://cdn.pixabay.com/photo/2017/08/19/00/47/flower-2656983__340.png" alt="Blog_9" class="img-responsive">
+            </a><br>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo_9">Show more</button>
+            <div id="demo_9" class="collapse">You can use the overflow property when you want to have better control of the layout.
+                The overflow property specifies what happens if content overflows an element's box</div></div>
+        <!--    -->
+
+        <div class="col-sm-4" style="height: 400px;width: 400px">
+            <a target="_blank" href="blogs.html">
+                <img src="https://cdn.pixabay.com/photo/2016/08/16/03/24/forest-1597029__340.png" alt="Blog_10" class="img-responsive">
+            </a>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo_10">Show more</button>
+            <div id="demo_10" class="collapse">You can use the overflow property when you want to have better control of the layout.
+                The overflow property specifies what happens if content overflows an element's box</div></div>
+        <!--    -->
+
+        <div class="col-sm-4" style="height: 400px;width: 400px">
+            <a target="_blank" href="blogs.html">
+                <img src="https://cdn.pixabay.com/photo/2016/12/08/11/56/winter-1891595__340.png" alt="Blog_11" class="img-responsive">
+            </a>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo_11">Show more</button>
+            <div id="demo_11" class="collapse">You can use the overflow property when you want to have better control of the layout.
+                The overflow property specifies what happens if content overflows an element's box</div></div>
+        <!--    -->
+
+    </div>
+</div>
+
+
+
+<div class="pagination">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+</div>
+
+
+<footer>
+    <div class="footer_deco">
+        <a href="content_policy.html">Content Policy</a>
+        <a href="contact_us.html">Contact Page</a>
+        <!--    </div>-->
+        <!--    <div class="footer_right" style="background-position: right">-->
+        <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+    </div>
+
+</footer>
+
+
+</body>
+</html>

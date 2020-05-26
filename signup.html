@@ -1,52 +1,92 @@
 <!doctype HTML>
 <html>
 <head>
-    <title>After Submit Page</title>
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /*.styling_boxes{*/
+        /*    border-radius: 5px;*/
+        /*    border: 2px;*/
+        /*    background-color: #73ADA1;*/
+        /*    padding: 20px;*/
+        /*    width: 250px;*/
+        /*    height: 0.5px;*/
+        /*}*/
+
+        #Sign_Up_button{
+            padding: 6px 29px;
+            margin: 4px 2px;
+            background-color: green;
+        }
+    </style>
 </head>
 
 <body>
-<form action="After_submit.html" autocomplete="on" autocapitalize="on" name="form_1">
+<div class="container">
+    <div class="page-header">
+        <h2 style="text-align:center; color: seagreen">Sign Up</h2>
+    </div>
+</div>
 
-    <fieldset>
-        <legend>Sign <Up></Up></legend>
+<div class="container" style="text-align: center;width: 400px">
+    <form action="After_submit.html" autocomplete="on" autocapitalize="on" class="well">
+        <fieldset>
+            <div>First Name<br>
+                <label>
+                    <input class="styling_boxes" type="text" maxlength="20" required><br><br>
+                </label>
+            </div>
 
-    <label> Enter the first name
-        <input type="text" maxlength="20" required><br><br>
-    </label>
+            <div>Last Name<br>
+                <label>
+                    <input class="styling_boxes" type="text" maxlength="20" required><br><br>
+                </label>
+            </div>
 
-    <label>Enter the surname
-        <input type="text" maxlength="20" required><br><br>
-    </label>
+            <div>Email/ Username<br>
+                <label>
+                    <input class="styling_boxes" type="text" required><br><br>
+                </label>
+            </div>
 
-    <label>Enter your Email/ Username
-        <input type="text" required><br><br>
-    </label>
+            <div>Date of Birth<br>
+                <label>
+                    <input class="styling_boxes" type="date" ><br><br>
+                </label>
+            </div>
 
-    <label>Enter the Date of Birth
-        <input type="date" ><br><br>
-    </label>
+            <div>Select Profession<br>
+                <label></label>
+                <input class="styling_boxes" list="datalist_pro" name="datalist_pro" required>
+                <datalist id="datalist_pro">
+                    <option value="Student"></option>
+                    <option value="Professional"></option>
+                    <option value="Intern"></option>
+                </datalist><br><br>
+            </div>
 
-    <label>Select Profession</label>
-    <input list="datalist_pro" name="datalist_pro" required>
-    <datalist id="datalist_pro">
-        <option value="Student"></option>
-        <option value="Professional"></option>
-        <option value="Intern"></option>
-    </datalist><br><br>
+            <div>Enter new Password<br>
+                <label>
+                    <input class="styling_boxes" type="password" minlength="6"required><br><br>
+                </label>
+            </div>
 
-    <label>Enter new Password
-        <input type="password" minlength="6"required><br><br>
-    </label>
+            <div>Enter new confirmed Password<br>
+                <label>
+                    <input class="styling_boxes" type="password" minlength="6" required><br><br>
+                </label>
 
-    <label>Enter new confirmed Password
-        <input type="password" minlength="6" required><br><br>
-    </label>
+            </div>
 
-    <input formaction="Form_1.html" id="Sign_In_button" type="submit" formtarget="_blank">
-    </fieldset>
+            <input formaction="After_submit.html" id="Sign_Up_button" class="btn btn-success" type="submit" formtarget="_blank" style="cursor: pointer">
 
+        </fieldset>
 
-</form>
+    </form>
+</div>
 
 </body>
 </html>
