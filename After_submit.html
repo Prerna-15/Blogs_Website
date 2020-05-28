@@ -30,12 +30,18 @@
 </head>
 
 <body>
-<div class="submit_text">
+<div id="open" class="submit_text" onautocomplete="openNav()">
     <h1 style="color: darkgreen">SUBMITTED</h1>
     <p>Thank you for your response.</p>
     <p>Click on button below to go to homepage.</p>
     <button><a href="homepage.html" style="cursor: pointer">Go back</a></button>
 </div>
+
+<script>
+    function openNav() {
+        document.getElementById("open").style.width = 100%;
+    }
+</script>
 
 
 </body>
