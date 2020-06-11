@@ -76,8 +76,8 @@
 
             <div class="form-group">
                 <label class="control-label col-sm-2">Please read the terms and conditions. Check the box</label>
-                <div class="checkbox" style="text-align: left">
-                    <label><input type="checkbox" required></label>
+                <div class="checkbox" id="checkbox" style="text-align: left">
+                    <label><input type="checkbox"></label>
                 </div>
             </div>
 
@@ -94,16 +94,32 @@
                 <div class="col-md-1">
                     <button style="background-color: seagreen" formaction="After_submit.html" onclick="feedback_submit()" class="btn btn-primary" id="submit_btn">Submit</button>
                 </div>
-                <script>
-                    function feedback_submit() {
-                        alert("Check the privacy terms checkbox to proceed")
-                        if(confirm){
-                        }
-                        else {
-                        }
-                    }
-                </script>
             </div>
+
+            <script>
+                var x = document.getElementById("checkbox")
+                var y = document.getElementById("submit_btn")
+                if(x.checked === true){
+                    y.click()
+                } else {
+                    // document.createElement(alert("click checkbox!!"))
+                }
+            </script>
+            <!--</div>-->
+
+
+
+
+                <!--<script>-->
+                    <!--function feedback_submit() {-->
+                        <!--alert("Check the privacy terms checkbox to proceed")-->
+                        <!--if(confirm){-->
+                        <!--}-->
+                        <!--else {-->
+                        <!--}-->
+                    <!--}-->
+                <!--</script>-->
+            <!--</div>-->
         </div>
     </form>
 

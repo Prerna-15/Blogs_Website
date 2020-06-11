@@ -12,12 +12,10 @@
             padding: 6px 22px;
             margin: 4px 2px;
             background-color: green;
-        }
-        #Sign_Up_button{
-            padding: 6px 22px;
-            margin: 4px 2px;
-            background-color: orange;
             color: black;
+        }
+        #checkFont{
+            font-family: "fantasy";
         }
 
     </style>
@@ -33,25 +31,69 @@
 <div class="container" style="text-align: center;width: 400px">
     <form action="After_submit.html" autocomplete="on" autocapitalize="on" class="well">
         <fieldset>
-            <div>Email Address/ Username<br>
+            <div id="mailID">Email Address/ Username<br>
                 <label>
-                    <input type="text">
+                    <input id="checkFont" type="text">
                 </label><br><br>
             </div>
-            <div class="alert alert-info">
+            <div id="info_popup" class="alert alert-info">
                 <strong>Info!</strong>Please fulfill this field.
             </div>
 
+            <script>
+                var x = document.getElementById("mailID");
+                var y = document.getElementById("info_popup");
+
+                if (x.text == null || x.text === ""){
+                    y.style.display();
+                }
+            </script>
+
+
             <div>Password<br>
                 <label>
-                    <input type="password">
+                    <input type="password" id="seePwd"><br>
+                    <input type="checkbox" onclick="seePWD()"> Show Password
                 </label><br><br>
+
+                <p id="seeAlert"></p>
             </div>
 
-            <input formaction="After_submit.html" id="Sign_In_button" class="btn btn-success" type="submit" formtarget="_blank" style="cursor: pointer">
+            <script>
+                function seePWD() {
+                    var x = document.getElementById("seePwd")
+                    if (x.type === "password"){
+                        x.type = "text";
+                    } else {
+                        x.type = "password";
+                    }
+                }
+            </script>
+
+            <!--<input formaction="After_submit.html" onclick="submitCheck()" id="Sign_In_button" class="btn btn-success" type="submit" formtarget="_blank" style="cursor: pointer">-->
+            <input onclick="submitCheck()" id="Sign_In_button" class="btn btn-success" type="submit" formtarget="_blank" style="cursor: pointer">
+
+            <script>
+                function submitCheck() {
+
+                    document.getElementById("Sign_In_button").innerHTML = "Page location is" + window.location.href;
+
+                    var x = document.getElementById("seePwd");
+                    var error = document.getElementById("seeAlert");
+                    var z = After_submit.html;
+
+                    if (x.length < 8 || x.length === 0) {
+                        x.prompt("Password need to be more than 8 characters")
+                    }else {
+                        error.prompt("Password need to be more than 8 characters")
+                        // onclick = z.formAction
+                    }
+                }
+            </script>
+
             <br>
             <br>
-            <p>Not registered, <a href="signup.html" style="text-decoration: none">Sign Up</a></p>
+            <p>Don't have a password, <a href="signup.html" style="text-decoration: none">Sign Up</a></p>
 
         </fieldset>
     </form>
